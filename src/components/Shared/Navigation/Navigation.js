@@ -18,7 +18,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 
-export default function Navigation() {
+export default function Navigation({ handleOpen }) {
  const theme = useTheme();
  const useStyle = makeStyles({
   navItem: {
@@ -182,6 +182,7 @@ export default function Navigation() {
            border: "1px solid #F9B233",
           },
          }}
+         onClick={handleOpen}
         >
          Login
         </Button>

@@ -3,8 +3,13 @@ import React from "react";
 import Navigation from "../../Shared/Navigation/Navigation";
 import bgImg from "../../../img/banner-img.png";
 import { Box, Button, Container, Typography } from "@mui/material";
+import LoginFrom from "../LoginForm/LoginFrom";
 
 const Banner = () => {
+ const [open, setOpen] = React.useState(false);
+ const handleOpen = () => setOpen(true);
+ const handleClose = () => setOpen(false);
+
  const useStyle = makeStyles({
   bannerContainer: {
    background: `url(${bgImg})`,
@@ -31,7 +36,7 @@ const Banner = () => {
 
  return (
   <div className={bannerContainer}>
-   <Navigation />
+   <Navigation handleOpen={handleOpen} />
    <Container>
     <Box className={bannerTextContainer}>
      <Typography className={bannerTitle}>
@@ -60,6 +65,7 @@ const Banner = () => {
       Start Learning
      </Button>
     </Box>
+    <LoginFrom open={open} handleClose={handleClose}></LoginFrom>
    </Container>
   </div>
  );
