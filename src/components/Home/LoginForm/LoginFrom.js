@@ -1,6 +1,7 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
-import { height } from "@mui/system";
+import { makeStyles } from "@mui/styles";
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const LoginFrom = ({ open, handleClose }) => {
  const style = {
@@ -15,6 +16,39 @@ const LoginFrom = ({ open, handleClose }) => {
   p: 4,
   borderRadius: "5px",
  };
+
+ const useStyle = makeStyles({
+  inputFrom: {
+   fontSize: "1rem",
+   width: "100%",
+   padding: "15px 10px",
+   border: "1px solid #515B61",
+   borderRadius: "5px",
+   "&:focus": {
+    outline: "1px solid #aaa",
+    border: "1px solid transparent",
+   },
+  },
+  inputTitle: {
+   marginBottom: 0,
+   fontSize: ".9rem",
+  },
+  loginBtn: {
+   background: "#FF4958 ",
+   color: "#fff",
+   border: "none",
+   width: "100%",
+   padding: "15px 10px",
+   margin: "10px 0",
+   borderRadius: "5px",
+   cursor: "pointer",
+  },
+ });
+
+ const { inputFrom, inputTitle, loginBtn } = useStyle();
+
+ const { register, handleSubmit } = useForm();
+ const onSubmit = (data) => console.log(data);
 
  return (
   <div>
@@ -87,6 +121,23 @@ const LoginFrom = ({ open, handleClose }) => {
       <Typography sx={{ fontFamily: "Lato" }}>OR</Typography>
       <Box sx={{ width: "40%", height: "2px", bgcolor: "#767676" }}></Box>
      </Box>
+     <form onSubmit={handleSubmit(onSubmit)}>
+      <p className={inputTitle}>Email</p>
+      <input
+       className={inputFrom}
+       {...register("email", { required: true })}
+       placeholder="Email"
+      />
+      <p className={inputTitle}>Password</p>
+      <input
+       className={inputFrom}
+       type="password"
+       {...register("password", { required: true })}
+       placeholder="Password"
+      />
+      <br />
+      <input className={loginBtn} type="submit" value="LOG IN" />
+     </form>
     </Box>
    </Modal>
   </div>

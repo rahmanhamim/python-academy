@@ -145,9 +145,6 @@ export default function Navigation({ handleOpen }) {
         <Link className={navLinks} to="/contact">
          Contact
         </Link>
-        <Link className={navLinks} to="/testlink">
-         Added Link
-        </Link>
        </Box>
        {user ? (
         <Button
