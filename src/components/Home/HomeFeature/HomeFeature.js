@@ -14,9 +14,7 @@ const HomeFeature = () => {
  const useStyle = makeStyles({
   featureTitle: {
    color: "#10375C",
-   fontSize: "3rem",
-   fontWeight: "600",
-   lineHeight: "1.2em",
+   fontWeight: "bold",
   },
   imgFeature: {
    display: "block",
@@ -202,7 +200,7 @@ const HomeFeature = () => {
 
  return (
   <Container sx={{ my: 8 }}>
-   <Typography className={featureTitle}>
+   <Typography variant="h3" className={featureTitle}>
     We aim to serve all are to <br /> meet your needs
    </Typography>
    <Grid sx={{ display: "flex", alignItems: "center" }} container spacing={2}>
