@@ -1,65 +1,48 @@
-import { Box, Button, Modal, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import React from "react";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Button from "@mui/material/Button";
+import { Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
-import CreateAccountForm from "./CreateAccountForm";
 
-const LoginFrom = ({ open, handleClose }) => {
- const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-  borderRadius: "5px",
+function CreateAccountForm({ inputFrom, inputTitle, loginBtn }) {
+ const [open, setOpen] = React.useState(false);
+ const handleOpen = () => {
+  setOpen(true);
  };
-
- const useStyle = makeStyles({
-  inputFrom: {
-   fontSize: "1rem",
-   width: "100%",
-   padding: "15px 10px",
-   border: "1px solid #515B61",
-   borderRadius: "5px",
-   "&:focus": {
-    outline: "1px solid #aaa",
-    border: "1px solid transparent",
-   },
-  },
-  inputTitle: {
-   marginBottom: 0,
-   fontSize: ".9rem",
-  },
-  loginBtn: {
-   background: "#FF4958 ",
-   color: "#fff",
-   border: "none",
-   width: "100%",
-   padding: "15px 10px",
-   margin: "10px 0",
-   borderRadius: "5px",
-   cursor: "pointer",
-  },
- });
-
- const { inputFrom, inputTitle, loginBtn } = useStyle();
+ const handleClose = () => {
+  setOpen(false);
+ };
 
  const { register, handleSubmit } = useForm();
  const onSubmit = (data) => console.log(data);
 
  return (
-  <div>
+  <React.Fragment>
+   <Button onClick={handleOpen} sx={{ color: "#767676" }}>
+    Sign Up
+   </Button>
    <Modal
+    hideBackdrop
     open={open}
     onClose={handleClose}
-    aria-labelledby="modal-modal-title"
-    aria-describedby="modal-modal-description"
+    aria-labelledby="child-modal-title"
+    aria-describedby="child-modal-description"
    >
-    <Box sx={style}>
+    <Box
+     sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: 400,
+      bgcolor: "background.paper",
+      border: "",
+      boxShadow: 24,
+      p: 4,
+      borderRadius: "5px",
+     }}
+    >
      <Typography
       onClick={handleClose}
       sx={{
@@ -80,7 +63,7 @@ const LoginFrom = ({ open, handleClose }) => {
       component="h2"
       sx={{ fontWeight: "bold", textAlign: "center", fontSize: "1.8rem" }}
      >
-      Log In
+      Create Account
      </Typography>
 
      <Button
@@ -141,12 +124,20 @@ const LoginFrom = ({ open, handleClose }) => {
      </form>
      <Box sx={{ textAlign: "center", color: "#767676" }}>
       <Typography sx={{ fontWeight: "bold", color: "#494949", mt: 1 }}>
-       Need an account?{" "}
-       <CreateAccountForm
-        inputFrom={inputFrom}
-        inputTitle={inputTitle}
-        loginBtn={loginBtn}
-       />
+       Already have an account?{" "}
+       <Button
+        onClick={handleClose}
+        sx={{
+         display: "inline",
+         cursor: "pointer",
+         textDecoration: "underline",
+         m: 0,
+         p: 0,
+         color: "#000 !important",
+        }}
+       >
+        Log In
+       </Button>
       </Typography>
       <Typography
        sx={{
@@ -190,8 +181,7 @@ const LoginFrom = ({ open, handleClose }) => {
      </Box>
     </Box>
    </Modal>
-  </div>
+  </React.Fragment>
  );
-};
-
-export default LoginFrom;
+}
+export default CreateAccountForm;
