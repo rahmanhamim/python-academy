@@ -9,7 +9,7 @@ const RegularButton = ({ content, fontSize, icon }) => {
     fontSize: `${fontSize || "1rem"}`,
     bgcolor: "#FF4958",
     color: "#fff",
-    maxWidth: "200px",
+
     padding: "1.2em 2em",
     border: "1px solid #FF4958",
     borderRadius: "3px",

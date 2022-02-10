@@ -56,6 +56,7 @@ const Banner = () => {
        border: "1px solid #FF4958",
        borderRadius: "3px",
        fontFamily: "Manrope",
+       mb: { xs: 10, md: 0 },
        "&:hover": {
         bgcolor: "#F9B233",
         border: "1px solid #F9B233",
