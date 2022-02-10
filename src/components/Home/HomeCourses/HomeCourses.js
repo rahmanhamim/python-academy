@@ -1,12 +1,21 @@
-import { Box, Container, Typography } from "@mui/material";
-import React from "react";
+import { Box, Container, Grid, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import bg1 from "../../../img/homecoursebg1.png";
 import bg3 from "../../../img/homecoursebg3.png";
 import bg2 from "../../../img/homecoursebg2.png";
+import CourseCards from "../../Shared/CourseCards/CourseCards";
+import iconImage from "../../../img/homecourseicon.png";
 
 const HomeCourses = () => {
+ const [courses, setCourses] = useState([]);
+ useEffect(() => {
+  fetch("./courses.json")
+   .then((res) => res.json())
+   .then((data) => setCourses(data));
+ }, []);
+
  return (
-  <Container sx={{ my: "10em" }}>
+  <Container sx={{ mt: "10em" }}>
    <Box
     sx={{
      position: "relative",
@@ -72,11 +81,30 @@ const HomeCourses = () => {
      We Provide Worldclass <br />
      Courses
     </Typography>
-    <Typography sx={{ color: "#515B61", my: 2 }}>
-     Urna posuere dapibus hac turpis euismod rutrum massa non id. Et ornare
-     <br /> urna placerat purus pharetra dolor.
-    </Typography>
+    <Box
+     sx={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      mx: "1em",
+     }}
+    >
+     <Typography sx={{ color: "#515B61", my: 2 }}>
+      Urna posuere dapibus hac turpis euismod rutrum massa non id. Et ornare
+      <br /> urna placerat purus pharetra dolor.
+     </Typography>
+     <img
+      style={{ display: "block", width: "110px", height: "19px" }}
+      src={iconImage}
+      alt=""
+     />
+    </Box>
    </Box>
+   <Grid container spacing={2}>
+    {courses.slice(0, 6).map((course) => (
+     <CourseCards course={course}></CourseCards>
+    ))}
+   </Grid>
   </Container>
  );
 };
