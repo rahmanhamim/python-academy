@@ -102,7 +102,7 @@ const HomeCourses = () => {
    </Box>
    <Grid container spacing={2}>
     {courses.slice(0, 6).map((course) => (
-     <CourseCards course={course}></CourseCards>
+     <CourseCards key={course.id} course={course}></CourseCards>
     ))}
    </Grid>
   </Container>
