@@ -10,7 +10,7 @@ const HomeResource = () => {
  return (
   <Box
    component="div"
-   sx={{ mt: 10, mb: 20, bgcolor: "#0F2D4A", pt: 8, color: "#fff" }}
+   sx={{ mt: 10, mb: 10, bgcolor: "#0F2D4A", pt: 8, color: "#fff" }}
   >
    <Container>
     <Typography

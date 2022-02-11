@@ -51,7 +51,6 @@ const CourseCards = ({ course }) => {
    "&:hover": {
     opacity: "1",
     transform: "scale(2)",
-    btnOver: true,
    },
    "&:before": {
     content: "''",
