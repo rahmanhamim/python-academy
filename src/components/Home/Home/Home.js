@@ -1,5 +1,7 @@
 import React from "react";
+import Footer from "../../Shared/Footer/Footer";
 import Banner from "../Banner/Banner";
+import HomeBlogs from "../HomeBlogs/HomeBlogs";
 import HomeCourses from "../HomeCourses/HomeCourses";
 import HomeFeature from "../HomeFeature/HomeFeature";
 import HomeResource from "../HomeResource/HomeResource";
@@ -15,6 +17,8 @@ const Home = () => {
    <HomeResource />
    <HomeTips />
    <HomeReview />
+   <HomeBlogs />
+   <Footer />
   </>
  );
 };
