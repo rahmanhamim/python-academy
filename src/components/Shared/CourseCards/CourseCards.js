@@ -107,11 +107,13 @@ const CourseCards = ({ course }) => {
        Lorem ipsum dolor sit amet, <br /> consectetur adipisicing <br /> elit.
        Eos veritatis
       </Typography>
-      <RegularButton
-       content="Check Availability"
-       fontSize="8px"
-       icon={true}
-      ></RegularButton>
+      <Link to={`/course/${course.id}`} style={{ textDecoration: "none" }}>
+       <RegularButton
+        content="Check Availability"
+        fontSize="8px"
+        icon={true}
+       ></RegularButton>
+      </Link>
       {/* overlay */}
      </Box>
      <CardMedia
@@ -121,7 +123,7 @@ const CourseCards = ({ course }) => {
       className={courseCardImg}
      />
      {!btnOver && (
-      <Link to="/" className={viewCourseBtn}>
+      <Link to={`/course/${course.id}`} className={viewCourseBtn}>
        <span>View Course</span>
        <ArrowForwardIosIcon sx={{ ml: 1, mt: "2px" }} />
       </Link>

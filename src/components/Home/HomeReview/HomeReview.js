@@ -9,7 +9,6 @@ import person1 from "../../../img/review-person-1.png";
 
 const HomeReview = () => {
  const sliderRef = useRef(null);
- console.log(sliderRef);
 
  return (
   <Grid container spacing={0}>
