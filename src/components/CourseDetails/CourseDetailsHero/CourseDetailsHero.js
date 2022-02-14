@@ -219,6 +219,7 @@ const CourseDetailsHero = ({ courseData }) => {
     </Grid>
     <Grid xs={12} md={6} sx={{ ml: { xs: 0, md: 5 } }}>
      <Typography variant="h4">Course Overview</Typography>
+     <Typography>{courseData?.overview}</Typography>
     </Grid>
    </Grid>
   </Container>
