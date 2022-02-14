@@ -29,6 +29,7 @@ const CourseDetailsMain = () => {
   courseContainer: {
    background: "linear-gradient(135.32deg, #053F66 12.22%, #186FB2 81.8%)",
    minHeight: "100vh",
+   paddingBottom: "3em",
   },
  });
 
