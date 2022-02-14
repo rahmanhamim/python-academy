@@ -1,7 +1,9 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
+import Alert from "@mui/material/Alert";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hooks/useAuth";
 import CreateAccountForm from "./CreateAccountForm";
 
 const LoginFrom = ({ open, handleClose }) => {
@@ -48,8 +50,17 @@ const LoginFrom = ({ open, handleClose }) => {
 
  const { inputFrom, inputTitle, loginBtn } = useStyle();
 
- const { register, handleSubmit } = useForm();
- const onSubmit = (data) => console.log(data);
+ const { user, loginUser, authError, signInWithGoogle } = useAuth();
+
+ const { register, handleSubmit, reset } = useForm();
+ const onSubmit = (data) => {
+  loginUser(data.email, data.password);
+  reset();
+ };
+
+ const hanldeGoogleSignIn = () => {
+  signInWithGoogle();
+ };
 
  return (
   <div>
@@ -74,120 +85,127 @@ const LoginFrom = ({ open, handleClose }) => {
      >
       x
      </Typography>
-     <Typography
-      id="modal-modal-title"
-      variant="h6"
-      component="h2"
-      sx={{ fontWeight: "bold", textAlign: "center", fontSize: "1.8rem" }}
-     >
-      Log In
-     </Typography>
-
-     <Button
-      sx={{
-       bgcolor: "#4688F1",
-       color: "#fff",
-       width: "100%",
-       py: "1em",
-       my: ".8em",
-       "&:hover": {
-        bgcolor: "#2b7dff",
-       },
-      }}
-     >
-      LOG IN WITH GOOGLE
-     </Button>
-     <Button
-      sx={{
-       bgcolor: "#3E5C97",
-       color: "#fff",
-       width: "100%",
-       py: "1em",
-       my: ".7em",
-       "&:hover": {
-        bgcolor: "#334c7d",
-       },
-      }}
-     >
-      LOG IN WITH FACEBOOK
-     </Button>
-     <Box
-      sx={{
-       display: "flex",
-       alignItems: "center",
-       justifyContent: "space-between",
-      }}
-     >
-      <Box sx={{ width: "40%", height: "2px", bgcolor: "#767676" }}></Box>
-      <Typography sx={{ fontFamily: "Lato" }}>OR</Typography>
-      <Box sx={{ width: "40%", height: "2px", bgcolor: "#767676" }}></Box>
-     </Box>
-     <form onSubmit={handleSubmit(onSubmit)}>
-      <p className={inputTitle}>Email</p>
-      <input
-       className={inputFrom}
-       {...register("email", { required: true })}
-       placeholder="Email"
-      />
-      <p className={inputTitle}>Password</p>
-      <input
-       className={inputFrom}
-       type="password"
-       {...register("password", { required: true })}
-       placeholder="Password"
-      />
-      <br />
-      <input className={loginBtn} type="submit" value="LOG IN" />
-     </form>
-     <Box sx={{ textAlign: "center", color: "#767676" }}>
-      <Typography sx={{ fontWeight: "bold", color: "#494949", mt: 1 }}>
-       Need an account?{" "}
-       <CreateAccountForm
-        inputFrom={inputFrom}
-        inputTitle={inputTitle}
-        loginBtn={loginBtn}
-       />
-      </Typography>
-      <Typography
-       sx={{
-        textDecoration: "underline",
-        fontSize: "15px",
-        mt: "3px",
-        cursor: "pointer",
-       }}
-      >
-       Forgot your password?
-      </Typography>
-      <Typography sx={{ fontSize: "15px", mt: "15px" }}>
-       By logging in, you agree to our
-      </Typography>
-      <Typography
-       variant="h6"
-       sx={{ fontSize: "15px", display: "inline-block", mt: "3px" }}
-      >
+     {user.email ? (
+      <Alert severity="success">Login Sucessfully</Alert>
+     ) : (
+      <Box>
        <Typography
-        sx={{
-         fontSize: "15px",
-         display: "inline-block",
-         textDecoration: "underline",
-         cursor: "pointer",
-        }}
+        id="modal-modal-title"
+        variant="h6"
+        component="h2"
+        sx={{ fontWeight: "bold", textAlign: "center", fontSize: "1.8rem" }}
        >
-        Privacy Policy
-       </Typography>{" "}
-       and{" "}
-       <Typography
-        sx={{
-         fontSize: "15px",
-         display: "inline-block",
-         textDecoration: "underline",
-         cursor: "pointer",
-        }}
-       >
-        Terms of Service.
+        Log In
        </Typography>
-      </Typography>
-     </Box>
+       <Button
+        onClick={hanldeGoogleSignIn}
+        sx={{
+         bgcolor: "#4688F1",
+         color: "#fff",
+         width: "100%",
+         py: "1em",
+         my: ".8em",
+         "&:hover": {
+          bgcolor: "#2b7dff",
+         },
+        }}
+       >
+        LOG IN WITH GOOGLE
+       </Button>
+       <Button
+        sx={{
+         bgcolor: "#3E5C97",
+         color: "#fff",
+         width: "100%",
+         py: "1em",
+         my: ".7em",
+         "&:hover": {
+          bgcolor: "#334c7d",
+         },
+        }}
+       >
+        LOG IN WITH FACEBOOK
+       </Button>
+       <Box
+        sx={{
+         display: "flex",
+         alignItems: "center",
+         justifyContent: "space-between",
+        }}
+       >
+        <Box sx={{ width: "40%", height: "2px", bgcolor: "#767676" }}></Box>
+        <Typography sx={{ fontFamily: "Lato" }}>OR</Typography>
+        <Box sx={{ width: "40%", height: "2px", bgcolor: "#767676" }}></Box>
+       </Box>
+       <form onSubmit={handleSubmit(onSubmit)}>
+        <p className={inputTitle}>Email</p>
+        <input
+         className={inputFrom}
+         {...register("email", { required: true })}
+         placeholder="Email"
+        />
+        <p className={inputTitle}>Password</p>
+        <input
+         className={inputFrom}
+         type="password"
+         {...register("password", { required: true })}
+         placeholder="Password"
+        />
+        <br />
+        <input className={loginBtn} type="submit" value="LOG IN" />
+       </form>
+       {authError && <Box sx={{ color: "red" }}>{authError}</Box>}
+       <Box sx={{ textAlign: "center", color: "#767676" }}>
+        <Typography sx={{ fontWeight: "bold", color: "#494949", mt: 1 }}>
+         Need an account?{" "}
+         <CreateAccountForm
+          inputFrom={inputFrom}
+          inputTitle={inputTitle}
+          loginBtn={loginBtn}
+         />
+        </Typography>
+        <Typography
+         sx={{
+          textDecoration: "underline",
+          fontSize: "15px",
+          mt: "3px",
+          cursor: "pointer",
+         }}
+        >
+         Forgot your password?
+        </Typography>
+        <Typography sx={{ fontSize: "15px", mt: "15px" }}>
+         By logging in, you agree to our
+        </Typography>
+        <Typography
+         variant="h6"
+         sx={{ fontSize: "15px", display: "inline-block", mt: "3px" }}
+        >
+         <Typography
+          sx={{
+           fontSize: "15px",
+           display: "inline-block",
+           textDecoration: "underline",
+           cursor: "pointer",
+          }}
+         >
+          Privacy Policy
+         </Typography>{" "}
+         and{" "}
+         <Typography
+          sx={{
+           fontSize: "15px",
+           display: "inline-block",
+           textDecoration: "underline",
+           cursor: "pointer",
+          }}
+         >
+          Terms of Service.
+         </Typography>
+        </Typography>
+       </Box>
+      </Box>
+     )}
     </Box>
    </Modal>
   </div>

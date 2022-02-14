@@ -17,8 +17,11 @@ import SegmentRoundedIcon from "@mui/icons-material/SegmentRounded";
 import PersonIcon from "@mui/icons-material/Person";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
+import useAuth from "../../../hooks/useAuth";
 
 export default function Navigation({ handleOpen }) {
+ const { user, logOut } = useAuth();
+
  const theme = useTheme();
  const useStyle = makeStyles({
   navItem: {
@@ -56,8 +59,6 @@ export default function Navigation({ handleOpen }) {
    },
   },
  });
-
- const user = false;
 
  const { navIcon, navItemContainer, appBarBgColor, navLinks } = useStyle();
  const [state, setState] = React.useState(false);
@@ -146,8 +147,9 @@ export default function Navigation({ handleOpen }) {
          Contact
         </Link>
        </Box>
-       {user ? (
+       {user?.email ? (
         <Button
+         onClick={logOut}
          startIcon={<PersonIcon />}
          sx={{
           bgcolor: "#FF4958",
