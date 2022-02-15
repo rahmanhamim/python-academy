@@ -9,7 +9,6 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { height } from "@mui/system";
 
 const Footer = () => {
  const useStyle = makeStyles({
@@ -31,7 +30,6 @@ const Footer = () => {
     color: "#fff",
     paddingTop: "4em",
     paddingBottom: "1em",
-    marginTop: "6em",
    }}
   >
    <Container sx={{ mt: 5 }}>

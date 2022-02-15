@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import LoginFrom from "../../Home/LoginForm/LoginFrom";
 import Navigation from "../../Shared/Navigation/Navigation";
 import CourseDetailsHero from "../CourseDetailsHero/CourseDetailsHero";
+import CourseDetailsLearn from "../CourseDetailsLearn/CourseDetailsLearn";
+import Footer from "../../Shared/Footer/Footer";
 
 const CourseDetailsMain = () => {
  const { id } = useParams();
@@ -36,12 +38,16 @@ const CourseDetailsMain = () => {
  const { courseContainer } = useStyle();
 
  return (
-  <Box component="div" className={courseContainer}>
-   <Navigation handleOpen={handleOpen} />
-   <CourseDetailsHero courseData={courseData} />
+  <>
+   <Box component="div" className={courseContainer}>
+    <Navigation handleOpen={handleOpen} />
+    <CourseDetailsHero courseData={courseData} />
+   </Box>
+   <CourseDetailsLearn courseData={courseData} />
+   <Footer></Footer>
 
    <LoginFrom open={open} handleClose={handleClose}></LoginFrom>
-  </Box>
+  </>
  );
 };
 

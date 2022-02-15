@@ -5,7 +5,8 @@
     "level": "beginner",
     "img": "https://i.ibb.co/Dp3BFZt/course-img-1.png",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+    "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2000,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -25,6 +26,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -33,7 +72,8 @@
     "level": "intermediate",
     "img": "https://i.ibb.co/RNmxD91/course-img-2.png",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2200,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -53,6 +93,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -61,7 +139,8 @@
     "level": "advanced",
     "img": "https://i.ibb.co/3Nr3R9V/course-img-3.png",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2500,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -81,6 +160,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"],
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -89,7 +206,8 @@
     "level": "beginner",
     "img": "https://i.ibb.co/7bhfvW5/course-img-4.png",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 1900,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -109,6 +227,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -117,7 +273,8 @@
     "level": "intermediate",
     "img": "https://i.ibb.co/6gnHQCh/course-img-5.png",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2800,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -137,6 +294,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -145,7 +340,8 @@
     "level": "intermediate",
     "img": "https://i.ibb.co/Y30nbfZ/course-img-6.png",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 3000,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -165,6 +361,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -173,7 +407,8 @@
     "level": "advanced",
     "img": "https://i.ibb.co/7rphCpH/course-img-7.png",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2800,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -193,6 +428,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -201,7 +474,8 @@
     "level": "advanced",
     "img": "https://i.ibb.co/ZczHtwh/course-img-8.jpg",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2600,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -221,6 +495,44 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"]  ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
   },
   {
@@ -229,7 +541,8 @@
     "level": "intermediate",
     "img": "https://i.ibb.co/WP1hLYr/course-img-9.jpg",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+    "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2400,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -249,7 +562,46 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
+    
   },
   {
     "id": "cr10",
@@ -257,7 +609,8 @@
     "level": "advanced",
     "img": "https://i.ibb.co/42qh0V4/course-img-10.jpg",
     "videoURL": "https://www.youtube.com/embed/rfscVS0vtbw",
-    "overview": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly. The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
+     "overview1": "Communication Skills are the most important personal skills you can ever develop for your success in life. Life is a series of communications. Those who develop strong communication skills do well in school, secure jobs and promotions and often ascend to the highest levels of leadership in corporations, governments and civic life. People who fail to develop communication skills often have their careers stagnate or plateau in the mid-range. Sadly, presentation skills are either not taught in primary or secondary education or are taught poorly.",
+    "overview2": " The Complete Communication Skills Masterclass for Life course is your way to get a Master's level  education on how to communicate effectively.",
     "price": 2800,
     "feature": [
       "lorem ipsum dolor sit amet. consectetur",
@@ -277,6 +630,45 @@
       "Communicate in an understandable manner",
       "lorem ipsum Communicate and influence people",
       "lorem ipsum Communicate and influence people"
+    ], 
+    "sneakImg": ["https://i.ibb.co/7p7fzt7/sneak-peak-img1.png", "https://i.ibb.co/Fx93YDX/sneak-peak-img2.png", "https://i.ibb.co/hYvxdRR/sneak-peak-img3.png", "https://i.ibb.co/M9MtJg2/sneak-peak-img4.png"] ,
+    "courseOutline" : [
+      {
+        "title": "IT Trends Shaping the Future of Business",
+        "subtitle": "Learn how businesses are adapting to technological innovation.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Introduction to Agile",
+        "subtitle": "Lay the foundation for building your Agile success.",
+        "duration": "7:00"
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "subtitle": "Learn the importance of cybersecurity in information technology.",
+        "duration": "5:00"
+      },
+      {
+        "title": "Evaluate and Select the Right Cloud Provider",
+        "subtitle": "Map your business requirements to determine which cloud-based solutions best needs.",
+        "duration": "6:00"
+      },
+      {
+        "title": "Understanding Networking Fundamentals",
+        "subtitle": "Build a foundation of networking knowledge in a real-world, multi-vendor environment.",
+        "duration": "9:00"
+      },
+      {
+        "title": "TCP/IP Networking Training Course",
+        "subtitle": "Learn the essential skills needed to set up, configure, support, and troubleshoot",
+        "duration": "5:00"
+      },
+      {
+        "title": "Getting Started with Python",
+        "subtitle": "Learn to install Python, write basic scripts, and use the Python language features",
+        "duration": "6:00"
+      }
     ]
+    
   }
 ]

@@ -16,6 +16,7 @@ import InsertChartOutlinedIcon from "@mui/icons-material/InsertChartOutlined";
 import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import CardMembershipIcon from "@mui/icons-material/CardMembership";
+import checkIcon from "../../../img/check-logo.png";
 
 const CourseDetailsHero = ({ courseData }) => {
  const [open, setOpen] = React.useState(false);
@@ -95,6 +96,7 @@ const CourseDetailsHero = ({ courseData }) => {
         sx={{ mt: 1, display: "flex", alignItems: "center" }}
        >
         <Grid
+         item
          xs={6}
          sx={{
           display: "flex",
@@ -131,6 +133,7 @@ const CourseDetailsHero = ({ courseData }) => {
          </Typography>
         </Grid>
         <Grid
+         item
          xs={6}
          sx={{
           textAlign: "right",
@@ -217,9 +220,25 @@ const CourseDetailsHero = ({ courseData }) => {
       </CardContent>
      </Card>
     </Grid>
-    <Grid xs={12} md={6} sx={{ ml: { xs: 0, md: 5 } }}>
-     <Typography variant="h4">Course Overview</Typography>
-     <Typography>{courseData?.overview}</Typography>
+    <Grid item xs={12} md={6} sx={{ ml: { xs: 0, md: 5 } }}>
+     <Typography variant="h4" sx={{ mt: { xs: 6, md: 0 } }}>
+      Course Overview
+     </Typography>
+     <Typography sx={{ fontSize: "1.2rem", lineHeight: "1.6", mt: 2 }}>
+      {courseData?.overview1}
+     </Typography>
+     <Typography sx={{ fontSize: "1.2rem", lineHeight: "1.6", mt: 2, mb: 5 }}>
+      {courseData?.overview2}
+     </Typography>
+     {courseData?.feature?.map((item, index) => (
+      <Typography
+       key={index}
+       sx={{ display: "flex", alignItems: "center", my: 2 }}
+      >
+       <img style={{ marginRight: "1em" }} src={checkIcon} alt="" />
+       {item}
+      </Typography>
+     ))}
     </Grid>
    </Grid>
   </Container>

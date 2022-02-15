@@ -19,7 +19,7 @@ const HomeBlogs = () => {
  }, []);
 
  return (
-  <Container sx={{ mt: 10, mb: 5 }}>
+  <Container sx={{ mt: 10, mb: 5, marginBottom: "6em" }}>
    <Typography
     variant="h3"
     sx={{ color: "#10375C", fontWeight: "bold", textAlign: "center" }}
