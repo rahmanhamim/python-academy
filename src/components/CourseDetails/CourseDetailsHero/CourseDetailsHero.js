@@ -8,7 +8,7 @@ import {
  Grid,
  Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import VideoModal from "../../Shared/VideoModal/VideoModal";
 import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
@@ -17,11 +17,20 @@ import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
 import CardMembershipIcon from "@mui/icons-material/CardMembership";
 import checkIcon from "../../../img/check-logo.png";
+import { CartContext } from "../../../contexts/CartProvider/CartProvider";
 
 const CourseDetailsHero = ({ courseData }) => {
  const [open, setOpen] = React.useState(false);
  const handleOpen = () => setOpen(true);
  const handleClose = () => setOpen(false);
+
+ const [cartItems, setCartItems] = useContext(CartContext);
+
+ const handleAddToCart = () => {
+  const newCartItems = [...cartItems, courseData];
+  setCartItems(newCartItems);
+ };
+ console.log(cartItems);
 
  return (
   <Container sx={{ color: "#fff", mt: 8, mb: 5 }}>
@@ -150,6 +159,7 @@ const CourseDetailsHero = ({ courseData }) => {
             bgcolor: "#F8B233",
            },
           }}
+          onClick={() => handleAddToCart(courseData)}
          >
           Add to cart
          </Button>
