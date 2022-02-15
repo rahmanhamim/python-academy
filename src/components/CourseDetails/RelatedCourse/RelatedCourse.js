@@ -11,7 +11,6 @@ const RelatedCourse = () => {
     .then((data) => setCourses(data)),
   []
  );
- console.log(courses);
 
  return (
   <Container sx={{ my: 10 }}>

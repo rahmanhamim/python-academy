@@ -11,11 +11,15 @@ import {
  TableRow,
  Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../contexts/CartProvider/CartProvider";
 import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";
 
 const Cart = () => {
+ const [cartItems, setCartItems] = useContext(CartContext);
+ console.log(cartItems);
+
  return (
   <>
    <Box

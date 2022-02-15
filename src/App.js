@@ -5,18 +5,21 @@ import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import CourseDetailsMain from "./components/CourseDetails/CourseDetailsMain/CourseDetailsMain";
 import ScrollToTop from "./hooks/ScrollToTop";
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./contexts/CartProvider/CartProvider";
 
 function App() {
  return (
   <>
    <AuthProvider>
-    <ScrollToTop>
-     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="course/:id" element={<CourseDetailsMain />} />
-      <Route path="cart" element={<Cart />} />
-     </Routes>
-    </ScrollToTop>
+    <CartProvider>
+     <ScrollToTop>
+      <Routes>
+       <Route path="/" element={<Home />} />
+       <Route path="course/:id" element={<CourseDetailsMain />} />
+       <Route path="cart" element={<Cart />} />
+      </Routes>
+     </ScrollToTop>
+    </CartProvider>
    </AuthProvider>
   </>
  );
