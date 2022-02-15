@@ -8,6 +8,7 @@ import CourseDetailsHero from "../CourseDetailsHero/CourseDetailsHero";
 import CourseDetailsLearn from "../CourseDetailsLearn/CourseDetailsLearn";
 import Footer from "../../Shared/Footer/Footer";
 import CourseDetailsCertification from "../CourseDetailsCertification/CourseDetailsCertification";
+import RelatedCourse from "../RelatedCourse/RelatedCourse";
 
 const CourseDetailsMain = () => {
  const { id } = useParams();
@@ -46,6 +47,7 @@ const CourseDetailsMain = () => {
    </Box>
    <CourseDetailsLearn courseData={courseData} />
    <CourseDetailsCertification />
+   <RelatedCourse />
    <Footer></Footer>
 
    <LoginFrom open={open} handleClose={handleClose}></LoginFrom>
