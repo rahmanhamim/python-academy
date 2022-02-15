@@ -1,6 +1,8 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
 import circleCheck from "../../../img/circle-point-icon.png";
+import PlayCircleRoundedIcon from "@mui/icons-material/PlayCircleRounded";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
 const CourseDetailsLearn = ({ courseData }) => {
  const [menuControl, setMenuControl] = useState("learn");
@@ -132,9 +134,69 @@ const CourseDetailsLearn = ({ courseData }) => {
       volutpat urna, mauris, adipiscing in dignissim vulputate.
      </Typography>
      <Grid container spacing={2} sx={{ my: 2 }}>
-      {courseData?.sneakImg?.map((img) => (
-       <Grid item xs={6} md={3}>
+      {courseData?.sneakImg?.map((img, index) => (
+       <Grid key={index} item xs={6} md={3}>
         <img src={img} alt="" style={{ maxWidth: "100%" }} />
+       </Grid>
+      ))}
+     </Grid>
+    </Box>
+    {/* Course Outline */}
+    <Box sx={{ mt: 8, mb: { xs: 60, sm: 70, md: 50, lg: 40 } }}>
+     <Typography
+      variant="h4"
+      sx={{ color: "#10375C", fontWeight: "bold", mb: 4 }}
+     >
+      Course Outline
+     </Typography>
+     <Grid container spacing={2}>
+      {courseData?.courseOutline?.map((outline, index) => (
+       <Grid key={index} item xs={12}>
+        <Grid container spacing={2} sx={{ justifyContent: "space-between" }}>
+         <Grid
+          item
+          xs={8}
+          sx={{ display: "flex", alignItems: "center", my: "6px" }}
+         >
+          <PlayCircleRoundedIcon
+           sx={{ color: "#FF4958", mr: 2, fontSize: "2.8rem" }}
+          />
+          <Box>
+           <Typography
+            sx={{ color: "#10375C", fontWeight: "bold", fontSize: "1.2rem" }}
+           >
+            {outline?.title}
+           </Typography>
+           <Typography sx={{ color: "#515B61", fontSize: ".9rem", mt: 1 }}>
+            {" "}
+            {outline?.subtitle}
+           </Typography>
+          </Box>
+         </Grid>
+         <Grid item xs={3}>
+          <Box
+           sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+           }}
+          >
+           <Box
+            sx={{
+             border: "0.8px dashed rgba(0, 0, 0, 0.4)",
+             width: "60%",
+             height: "1px",
+            }}
+           ></Box>
+           <LockOutlinedIcon
+            sx={{ width: "20%", color: "rgba(15, 45, 74, 0.5)" }}
+           />
+          </Box>
+          <Typography sx={{ textAlign: "center", color: "#515B61" }}>
+           {outline?.duration} mins
+          </Typography>
+         </Grid>
+        </Grid>
        </Grid>
       ))}
      </Grid>
