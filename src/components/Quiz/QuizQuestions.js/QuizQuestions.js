@@ -36,7 +36,6 @@ const QuizQuestions = () => {
  const [showFinalResults, setFinalResults] = useState(false);
  const [score, setScore] = useState(0);
  const [currentQuestion, setCurrentQuestion] = useState(0);
- const [defaultChecked, setDefaultChecked] = useState(false);
 
  useEffect(() => {
   fetch("quizContent.json")
@@ -49,12 +48,10 @@ const QuizQuestions = () => {
  const handleNextQuestion = () => {
   if (currentQuestion + 1 < questions.length) {
    setCurrentQuestion(currentQuestion + 1);
-   setDefaultChecked(false);
   } else {
    alert("final question reached");
   }
  };
- console.log(defaultChecked);
 
  const handleQuestionCheking = (id) => {
   console.log(questions[currentQuestion].right_answer, id);
@@ -92,7 +89,7 @@ const QuizQuestions = () => {
      {questions[currentQuestion]?.options?.map((option) => (
       <Box key={option.id} sx={questionLineStyle}>
        <Checkbox
-        checked={defaultChecked}
+        value={true}
         onClick={() => handleQuestionCheking(option.id)}
        />
        <Typography sx={{ fontSize: "1.2rem" }}>{option?.option}</Typography>
