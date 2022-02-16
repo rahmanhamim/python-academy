@@ -1,21 +1,17 @@
 import { TableCell, TableRow, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const CartProducts = ({ item }) => {
  const [quantity, setQuantity] = useState(item.quantity);
- const [updatedTotal, setUpdatedTotal] = useState(item.totalPrice);
 
  const handlePlusQuantity = () => {
   setQuantity((item.quantity += 1));
-  setUpdatedTotal(item.price * quantity);
  };
  const handleMinusQuantity = () => {
   setQuantity((item.quantity -= 1));
-  setUpdatedTotal(item.price * quantity);
  };
 
  console.log(item);
- console.log(updatedTotal);
 
  return (
   <TableRow

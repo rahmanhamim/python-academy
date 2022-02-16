@@ -11,8 +11,9 @@ import {
  TableRow,
  Typography,
 } from "@mui/material";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartProvider/CartProvider";
+import CourseCards from "../Shared/CourseCards/CourseCards";
 import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";
 import CartProducts from "./CartProducts";
@@ -38,6 +39,15 @@ const Cart = () => {
  };
 
  console.log(cartItems);
+
+ const [coursesSuggestion, setCoursesSuggestion] = useState([]);
+ useEffect(
+  () =>
+   fetch("/courses.json")
+    .then((res) => res.json())
+    .then((data) => setCoursesSuggestion(data)),
+  []
+ );
 
  return (
   <>
@@ -194,9 +204,29 @@ const Cart = () => {
        </Grid>
       </Grid>
      </Box>
+     {/* -------------------------------- */}
     </Container>
-    <Footer></Footer>
    </Box>
+   <Container>
+    <Box sx={{ my: 10 }}>
+     <Typography
+      variant="h4"
+      sx={{ color: "#10375C", fontWeight: "bold", m: 2 }}
+     >
+      People Are Also Learning
+     </Typography>
+     <Typography sx={{ color: "#292C44", m: 2 }}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> amet
+      volutpat urna, mauris, adipiscing in dignissim vulputate.
+     </Typography>
+     <Grid container spacing={2} sx={{ mt: 3 }}>
+      {coursesSuggestion.slice(0, 3).map((course) => (
+       <CourseCards key={course.id} course={course}></CourseCards>
+      ))}
+     </Grid>
+    </Box>
+   </Container>
+   <Footer></Footer>
   </>
  );
 };
