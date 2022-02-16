@@ -45,6 +45,7 @@ const Cart = () => {
   });
   setCartItems(newCart);
  };
+
  const minusQuantity = (item) => {
   const newCart = cartItems.map((cart) => {
    if (cart.id === item.id) {
