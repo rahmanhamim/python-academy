@@ -6,6 +6,7 @@ import CourseDetailsMain from "./components/CourseDetails/CourseDetailsMain/Cour
 import ScrollToTop from "./hooks/ScrollToTop";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./contexts/CartProvider/CartProvider";
+import QuizHome from "./components/Quiz/QuizHome/QuizHome";
 
 function App() {
  return (
@@ -17,6 +18,7 @@ function App() {
        <Route path="/" element={<Home />} />
        <Route path="course/:id" element={<CourseDetailsMain />} />
        <Route path="cart" element={<Cart />} />
+       <Route path="quiz" element={<QuizHome />} />
       </Routes>
      </ScrollToTop>
     </CartProvider>
