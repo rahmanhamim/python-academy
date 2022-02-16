@@ -15,6 +15,7 @@ import React, { useContext, useState } from "react";
 import { CartContext } from "../../contexts/CartProvider/CartProvider";
 import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";
+import CartProducts from "./CartProducts";
 
 const Cart = () => {
  const [cartItems, setCartItems] = useContext(CartContext);
@@ -34,28 +35,6 @@ const Cart = () => {
   } else {
    alert("Code Not Valid");
   }
- };
-
- const plusQuantity = (item) => {
-  const newCart = cartItems.map((cart) => {
-   if (cart.id === item.id) {
-    cart.quantity += 1;
-   }
-   return cart;
-  });
-  setCartItems(newCart);
- };
-
- const minusQuantity = (item) => {
-  const newCart = cartItems.map((cart) => {
-   if (cart.id === item.id) {
-    if (item.quantity > 0) {
-     item.quantity = item.quantity - 1;
-    }
-   }
-   return cart;
-  });
-  setCartItems(newCart);
  };
 
  console.log(cartItems);
@@ -138,56 +117,7 @@ const Cart = () => {
           <TableBody>
            {/* ------------------------------- */}
            {cartItems?.map((item) => (
-            <TableRow
-             key={item.id}
-             sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-             <TableCell
-              component="th"
-              scope="row"
-              sx={{ display: "flex", alignItems: "center" }}
-             >
-              <img style={{ maxWidth: "60px" }} src={item.img} alt="" />
-              <Typography sx={{ maxWidth: "200px", ml: 2 }}>
-               {item.title}
-              </Typography>
-             </TableCell>
-             <TableCell align="right">{item.price}</TableCell>
-             <TableCell align="right" sx={{ fontSize: "1.1rem" }}>
-              <Typography
-               component="span"
-               sx={{
-                mr: 2,
-                cursor: "pointer",
-                border: "1px solid #4E4848",
-                borderRadius: "4px",
-                px: 1,
-                pb: "2px",
-               }}
-               onClick={() => minusQuantity(item)}
-              >
-               -
-              </Typography>
-              {item.quantity || 1}{" "}
-              <Typography
-               component="span"
-               sx={{
-                cursor: "pointer",
-                border: "1px solid #4E4848",
-                borderRadius: "4px",
-                px: 1,
-                pb: "2px",
-                ml: 1,
-               }}
-               onClick={() => plusQuantity(item)}
-              >
-               +
-              </Typography>
-             </TableCell>
-             <TableCell align="right">
-              {item.totalPrice || item.price}
-             </TableCell>
-            </TableRow>
+            <CartProducts key={item.id} item={item}></CartProducts>
            ))}
           </TableBody>
          </Table>
