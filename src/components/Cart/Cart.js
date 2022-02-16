@@ -11,13 +11,52 @@ import {
  TableRow,
  Typography,
 } from "@mui/material";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { CartContext } from "../../contexts/CartProvider/CartProvider";
 import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";
 
 const Cart = () => {
  const [cartItems, setCartItems] = useContext(CartContext);
+
+ let subtotal = cartItems.reduce(function (accumulator, item) {
+  return accumulator + item.totalPrice;
+ }, 0);
+ const VAT = subtotal * 0.15;
+
+ const [grossTotal, setGrossTotal] = useState(subtotal + VAT);
+ const [codeValue, setCodeValue] = useState("");
+
+ const handleCouponBtn = () => {
+  if (codeValue === "10PER") {
+   let grossCalutatedTotal = subtotal - (subtotal * 15) / 100;
+   setGrossTotal(grossCalutatedTotal);
+  } else {
+   alert("Code Not Valid");
+  }
+ };
+
+ const plusQuantity = (item) => {
+  const newCart = cartItems.map((cart) => {
+   if (cart.id === item.id) {
+    cart.quantity += 1;
+   }
+   return cart;
+  });
+  setCartItems(newCart);
+ };
+ const minusQuantity = (item) => {
+  const newCart = cartItems.map((cart) => {
+   if (cart.id === item.id) {
+    if (item.quantity > 0) {
+     item.quantity = item.quantity - 1;
+    }
+   }
+   return cart;
+  });
+  setCartItems(newCart);
+ };
+
  console.log(cartItems);
 
  return (
@@ -96,16 +135,59 @@ const Cart = () => {
            </TableRow>
           </TableHead>
           <TableBody>
-           {/* {rows.map((row) => ( */}
-           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-            <TableCell component="th" scope="row">
-             row.name
-            </TableCell>
-            <TableCell align="right">calories</TableCell>
-            <TableCell align="right">row.fat</TableCell>
-            <TableCell align="right">row.carbs</TableCell>
-           </TableRow>
-           {/* ))} */}
+           {/* ------------------------------- */}
+           {cartItems?.map((item) => (
+            <TableRow
+             key={item.id}
+             sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+             <TableCell
+              component="th"
+              scope="row"
+              sx={{ display: "flex", alignItems: "center" }}
+             >
+              <img style={{ maxWidth: "60px" }} src={item.img} alt="" />
+              <Typography sx={{ maxWidth: "200px", ml: 2 }}>
+               {item.title}
+              </Typography>
+             </TableCell>
+             <TableCell align="right">{item.price}</TableCell>
+             <TableCell align="right" sx={{ fontSize: "1.1rem" }}>
+              <Typography
+               component="span"
+               sx={{
+                mr: 2,
+                cursor: "pointer",
+                border: "1px solid #4E4848",
+                borderRadius: "4px",
+                px: 1,
+                pb: "2px",
+               }}
+               onClick={() => minusQuantity(item)}
+              >
+               -
+              </Typography>
+              {item.quantity || 1}{" "}
+              <Typography
+               component="span"
+               sx={{
+                cursor: "pointer",
+                border: "1px solid #4E4848",
+                borderRadius: "4px",
+                px: 1,
+                pb: "2px",
+                ml: 1,
+               }}
+               onClick={() => plusQuantity(item)}
+              >
+               +
+              </Typography>
+             </TableCell>
+             <TableCell align="right">
+              {item.totalPrice || item.price}
+             </TableCell>
+            </TableRow>
+           ))}
           </TableBody>
          </Table>
         </TableContainer>
@@ -128,6 +210,7 @@ const Cart = () => {
         </Typography>
         <Box sx={{ display: "flex" }}>
          <input
+          onChange={(e) => setCodeValue(e.target.value)}
           style={{
            padding: "1em",
            width: "60%",
@@ -137,6 +220,7 @@ const Cart = () => {
           placeholder="Coupon Code"
          ></input>
          <Button
+          onClick={handleCouponBtn}
           sx={{
            bgcolor: "#FF4958",
            color: "#fff",
@@ -150,18 +234,18 @@ const Cart = () => {
          </Button>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "space-between", pt: 2 }}>
-         <Typography>Subtotal</Typography>
-         <Typography>£</Typography>
+         <Typography>subtotal</Typography>
+         <Typography>£{subtotal}</Typography>
         </Box>
         <hr />
         <Box sx={{ display: "flex", justifyContent: "space-between", pt: 2 }}>
-         <Typography>VAT</Typography>
-         <Typography>£</Typography>
+         <Typography>VAT 15%</Typography>
+         <Typography>£ {VAT} </Typography>
         </Box>
         <hr />
         <Box sx={{ display: "flex", justifyContent: "space-between", pt: 2 }}>
          <Typography>Total</Typography>
-         <Typography>£</Typography>
+         <Typography>£{grossTotal}</Typography>
         </Box>
         <Button
          sx={{
