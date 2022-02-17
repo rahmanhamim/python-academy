@@ -15,12 +15,13 @@ import blogBannerImg from "../../../img/blogs-banner.png";
 import Footer from "../../Shared/Footer/Footer";
 import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
 import BlogPosts from "../BlogPosts/BlogPosts";
+import PaginationBlogs from "../PaginationBlogs/PaginationBlogs";
 
 const BlogsHome = () => {
  const [posts, setPosts] = useState([]);
  const [loading, setLoading] = useState(false);
  const [currentPage, setCurrentPage] = useState(1);
- const [postsPerPage] = useState(10);
+ const [postsPerPage] = useState(6);
 
  useEffect(() => {
   setLoading(true);
@@ -32,7 +33,14 @@ const BlogsHome = () => {
    });
  }, []);
 
- console.log(posts);
+ const indexOfLastPost = currentPage * postsPerPage;
+ const indexOfFirstPost = indexOfLastPost - postsPerPage;
+ const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+ const paginate = (pageNumber) => {
+  setCurrentPage(pageNumber);
+  window.scroll(0, 0);
+ };
 
  return (
   <>
@@ -72,12 +80,17 @@ const BlogsHome = () => {
     {/* posts container */}
     <Container>
      <Grid container spacing={5}>
-      {posts?.map((post) => (
+      {currentPosts?.map((post) => (
        <BlogPosts key={post.id} post={post} loading={loading}></BlogPosts>
       ))}
      </Grid>
     </Container>
     {/* posts container end */}
+    <PaginationBlogs
+     postsPerPage={postsPerPage}
+     totalPosts={posts.length}
+     paginate={paginate}
+    ></PaginationBlogs>
    </Box>
    <Footer></Footer>
   </>

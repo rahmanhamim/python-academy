@@ -41,7 +41,7 @@ const BlogPosts = ({ post, loading }) => {
      >
       <DateRangeRoundedIcon />{" "}
       <Typography variant="span" sx={{ ml: 1 }}>
-       10/10/20
+       {post.publishDate}
       </Typography>
      </Typography>
      <Typography
@@ -50,15 +50,14 @@ const BlogPosts = ({ post, loading }) => {
       component="div"
       sx={{ color: "#10375C" }}
      >
-      Lizard
+      {post.title} {post.id}
      </Typography>
      <Typography
       variant="body2"
       color="text.secondary"
       sx={{ color: "#515B61" }}
      >
-      Lizards are a widespread group of squamate reptiles, with over 6,000
-      species, ranging across all continents except Antarctica
+      {post.subtitle}
      </Typography>
     </CardContent>
     <CardActions sx={{ m: 0, p: 0 }}>
