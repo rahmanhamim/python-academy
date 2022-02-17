@@ -1,11 +1,4 @@
-import {
- Box,
- Checkbox,
- Container,
- Typography,
- Button,
- FormControlLabel,
-} from "@mui/material";
+import { Box, Checkbox, Container, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 const QuizQuestions = () => {
@@ -35,6 +28,7 @@ const QuizQuestions = () => {
  const [questions, setQuestions] = useState([]);
  const [showFinalResults, setFinalResults] = useState(false);
  const [score, setScore] = useState(0);
+
  const [currentQuestion, setCurrentQuestion] = useState(0);
 
  useEffect(() => {
@@ -54,7 +48,9 @@ const QuizQuestions = () => {
  };
 
  const handleQuestionCheking = (id) => {
-  console.log(questions[currentQuestion].right_answer, id);
+  if (questions[currentQuestion].right_answer == id) {
+   setScore(score + 1);
+  }
  };
 
  return (
@@ -88,10 +84,7 @@ const QuizQuestions = () => {
      {/* Question Container */}
      {questions[currentQuestion]?.options?.map((option) => (
       <Box key={option.id} sx={questionLineStyle}>
-       <Checkbox
-        value={true}
-        onClick={() => handleQuestionCheking(option.id)}
-       />
+       <Checkbox onClick={(e) => handleQuestionCheking(option.id)} />
        <Typography sx={{ fontSize: "1.2rem" }}>{option?.option}</Typography>
       </Box>
      ))}
