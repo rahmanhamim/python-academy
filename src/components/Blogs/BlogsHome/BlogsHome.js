@@ -7,6 +7,7 @@ import {
  CardMedia,
  Container,
  Grid,
+ Pagination,
  Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
@@ -36,6 +37,11 @@ const BlogsHome = () => {
  const indexOfLastPost = currentPage * postsPerPage;
  const indexOfFirstPost = indexOfLastPost - postsPerPage;
  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+ const pageNumbers = [];
+ for (let i = 1; i <= Math.ceil(posts.length / postsPerPage); i++) {
+  pageNumbers.push(i);
+ }
 
  const paginate = (pageNumber) => {
   setCurrentPage(pageNumber);
@@ -86,11 +92,20 @@ const BlogsHome = () => {
      </Grid>
     </Container>
     {/* posts container end */}
-    <PaginationBlogs
+    {/* MUI pagination */}
+    <Pagination
+     sx={{ display: "flex", justifyContent: "center", pt: 5 }}
+     count={pageNumbers.length}
+     variant="outlined"
+     onChange={(e, value) => paginate(value)}
+    />
+
+    {/* Custom Pagination */}
+    {/* <PaginationBlogs
      postsPerPage={postsPerPage}
      totalPosts={posts.length}
      paginate={paginate}
-    ></PaginationBlogs>
+    ></PaginationBlogs> */}
    </Box>
    <Footer></Footer>
   </>
