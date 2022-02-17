@@ -61,23 +61,45 @@ export default function Navigation({ handleOpen }) {
  });
 
  const { navIcon, navItemContainer, appBarBgColor, navLinks } = useStyle();
+ const mobileMenuStyles = {
+  textDecoration: "none",
+  color: "#10375C",
+ };
  const [state, setState] = React.useState(false);
 
  const list = (
   <Box sx={{ width: 250 }} role="presentation">
    <List>
-    <ListItem button>
-     <ListItemText>HOME</ListItemText>
-    </ListItem>
-    <ListItem button>
-     <ListItemText>SERVICES</ListItemText>
-    </ListItem>
-    <ListItem button>
-     <ListItemText>OUR PROJECTS</ListItemText>
-    </ListItem>
-    <ListItem button>
-     <ListItemText>ABOUT US</ListItemText>
-    </ListItem>
+    <Link style={mobileMenuStyles} to="/">
+     <ListItem button>
+      <ListItemText>HOME</ListItemText>
+     </ListItem>
+    </Link>
+    <Link style={mobileMenuStyles} to="/allcourses">
+     <ListItem button>
+      <ListItemText>AllCourses</ListItemText>
+     </ListItem>
+    </Link>
+    <Link style={mobileMenuStyles} to="/blogs">
+     <ListItem button>
+      <ListItemText>Blogs</ListItemText>
+     </ListItem>
+    </Link>
+    <Link style={mobileMenuStyles} to="/about">
+     <ListItem button>
+      <ListItemText>About</ListItemText>
+     </ListItem>
+    </Link>
+    <Link style={mobileMenuStyles} to="/contact">
+     <ListItem button>
+      <ListItemText>Contact</ListItemText>
+     </ListItem>
+    </Link>
+    <Link style={mobileMenuStyles} to="/quiz">
+     <ListItem button>
+      <ListItemText>Free Quiz</ListItemText>
+     </ListItem>
+    </Link>
    </List>
    <Divider />
   </Box>
@@ -94,17 +116,6 @@ export default function Navigation({ handleOpen }) {
     >
      <Container>
       <Toolbar sx={{ padding: "0 !important" }}>
-       <IconButton
-        size="large"
-        edge="start"
-        color="inherit"
-        aria-label="menu"
-        sx={{ mr: 1 }}
-        className={navIcon}
-        onClick={() => setState(true)}
-       >
-        <SegmentRoundedIcon />
-       </IconButton>
        <Typography
         variant="h6"
         component="div"
@@ -128,7 +139,7 @@ export default function Navigation({ handleOpen }) {
         }}
         className={navItemContainer}
        >
-        <Link className={navLinks} to="/">
+        <Link className={navLinks} to="/allcourses">
          <SearchIcon sx={{ mt: 1, fontSize: "2rem" }} />
         </Link>
         <Link className={navLinks} to="/">
@@ -145,6 +156,9 @@ export default function Navigation({ handleOpen }) {
         </Link>
         <Link className={navLinks} to="/contact">
          Contact
+        </Link>
+        <Link className={navLinks} to="/quiz">
+         Free Quiz
         </Link>
        </Box>
        {user?.email ? (
@@ -189,6 +203,17 @@ export default function Navigation({ handleOpen }) {
          Login
         </Button>
        )}
+       <IconButton
+        size="large"
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        sx={{ ml: 1 }}
+        className={navIcon}
+        onClick={() => setState(true)}
+       >
+        <SegmentRoundedIcon />
+       </IconButton>
       </Toolbar>
      </Container>
     </AppBar>

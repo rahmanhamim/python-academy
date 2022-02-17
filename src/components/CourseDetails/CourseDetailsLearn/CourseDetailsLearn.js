@@ -126,7 +126,11 @@ const CourseDetailsLearn = ({ courseData }) => {
     </Box>
     {/* Sneak Peak section */}
     <Box>
-     <Typography variant="h3" sx={{ color: "#10375C", fontWeight: "bold" }}>
+     <Typography
+      id="sneek"
+      variant="h3"
+      sx={{ color: "#10375C", fontWeight: "bold" }}
+     >
       Course Sneak Peek
      </Typography>
      <Typography sx={{ my: 2, fontSize: "1.2rem" }}>
