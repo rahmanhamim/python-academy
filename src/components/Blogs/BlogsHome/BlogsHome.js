@@ -1,20 +1,8 @@
-import {
- Box,
- Button,
- Card,
- CardActions,
- CardContent,
- CardMedia,
- Container,
- Grid,
- Pagination,
- Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Pagination, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Navigation from "../../Shared/Navigation/Navigation";
-import blogBannerImg from "../../../img/blogs-banner.png";
+import blogBannerImg from "../../../img/section-banner.png";
 import Footer from "../../Shared/Footer/Footer";
-import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
 import BlogPosts from "../BlogPosts/BlogPosts";
 import PaginationBlogs from "../PaginationBlogs/PaginationBlogs";
 
@@ -45,7 +33,10 @@ const BlogsHome = () => {
 
  const paginate = (pageNumber) => {
   setCurrentPage(pageNumber);
-  window.scroll(0, 0);
+  window.scrollTo({
+   top: 0,
+   behavior: "smooth",
+  });
  };
 
  return (

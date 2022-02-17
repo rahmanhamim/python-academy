@@ -8,6 +8,7 @@ import Cart from "./components/Cart/Cart";
 import CartProvider from "./contexts/CartProvider/CartProvider";
 import QuizHome from "./components/Quiz/QuizHome/QuizHome";
 import BlogsHome from "./components/Blogs/BlogsHome/BlogsHome";
+import AllCourses from "./components/AllCourses/AllCourses";
 
 function App() {
  return (
@@ -21,6 +22,7 @@ function App() {
        <Route path="cart" element={<Cart />} />
        <Route path="quiz" element={<QuizHome />} />
        <Route path="blogs" element={<BlogsHome />} />
+       <Route path="allcourses" element={<AllCourses />} />
       </Routes>
      </ScrollToTop>
     </CartProvider>
