@@ -9,6 +9,7 @@ import CartProvider from "./contexts/CartProvider/CartProvider";
 import QuizHome from "./components/Quiz/QuizHome/QuizHome";
 import BlogsHome from "./components/Blogs/BlogsHome/BlogsHome";
 import AllCourses from "./components/AllCourses/AllCourses";
+import BlogDetailsMain from "./components/Blogs/BlogDetailsMain/BlogDetailsMain";
 
 function App() {
  return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
        <Route path="/" element={<Home />} />
        <Route path="course/:id" element={<CourseDetailsMain />} />
+       <Route path="blogs/:id" element={<BlogDetailsMain />} />
        <Route path="cart" element={<Cart />} />
        <Route path="quiz" element={<QuizHome />} />
        <Route path="blogs" element={<BlogsHome />} />

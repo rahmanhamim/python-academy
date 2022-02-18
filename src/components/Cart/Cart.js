@@ -13,12 +13,19 @@ import {
 } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartProvider/CartProvider";
+import LoginFrom from "../Home/LoginForm/LoginFrom";
 import CourseCards from "../Shared/CourseCards/CourseCards";
 import Footer from "../Shared/Footer/Footer";
 import Navigation from "../Shared/Navigation/Navigation";
 import CartProducts from "./CartProducts";
 
 const Cart = () => {
+ // ----------------------------------
+ //  Login Form handler
+ const [open, setOpen] = React.useState(false);
+ const handleOpen = () => setOpen(true);
+ const handleClose = () => setOpen(false);
+ // -------------------------------------
  const [cartItems, setCartItems] = useContext(CartContext);
 
  let subtotal = cartItems.reduce(function (accumulator, item) {
@@ -56,7 +63,7 @@ const Cart = () => {
      background: "linear-gradient(135.32deg, #053F66 12.22%, #186FB2 81.8%)",
     }}
    >
-    <Navigation />
+    <Navigation handleOpen={handleOpen} />
    </Box>
    <Box sx={{ background: "rgba(71, 68, 228, 0.1)" }}>
     <Container sx={{ py: 10 }}>
@@ -227,6 +234,7 @@ const Cart = () => {
     </Box>
    </Container>
    <Footer></Footer>
+   <LoginFrom open={open} handleClose={handleClose}></LoginFrom>
   </>
  );
 };

@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
+import { Link } from "react-router-dom";
 
 const BlogPosts = ({ post, loading }) => {
  return (
@@ -61,9 +62,11 @@ const BlogPosts = ({ post, loading }) => {
      </Typography>
     </CardContent>
     <CardActions sx={{ m: 0, p: 0 }}>
-     <Button sx={{ color: "#10375C", border: "2px solid #10375C", my: 2 }}>
-      Learn More
-     </Button>
+     <Link to={`/blogs/${post.id}`} style={{ textDecoration: "none" }}>
+      <Button sx={{ color: "#10375C", border: "2px solid #10375C", my: 2 }}>
+       Learn More
+      </Button>
+     </Link>
     </CardActions>
    </Card>
   </Grid>

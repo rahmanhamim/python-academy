@@ -5,8 +5,17 @@ import blogBannerImg from "../../../img/section-banner.png";
 import Footer from "../../Shared/Footer/Footer";
 import BlogPosts from "../BlogPosts/BlogPosts";
 import PaginationBlogs from "../PaginationBlogs/PaginationBlogs";
+import LoginFrom from "../../Home/LoginForm/LoginFrom";
 
 const BlogsHome = () => {
+ // ----------------------------------
+ //  Login Form handler
+ const [open, setOpen] = React.useState(false);
+ const handleOpen = () => setOpen(true);
+ const handleClose = () => setOpen(false);
+
+ // -------------------------------------
+
  const [posts, setPosts] = useState([]);
  const [loading, setLoading] = useState(false);
  const [currentPage, setCurrentPage] = useState(1);
@@ -46,12 +55,12 @@ const BlogsHome = () => {
      background: "linear-gradient(135.32deg, #053F66 12.22%, #186FB2 81.8%)",
     }}
    >
-    <Navigation />
+    <Navigation handleOpen={handleOpen} />
    </Box>
    <Box
     sx={{
-     minHeight: "350px",
      background: `url(${blogBannerImg})`,
+     minHeight: "350px",
      backgroundSize: "cover",
      backgroundPosition: "center",
      backgroundRepeat: "no-repeat",
@@ -99,6 +108,7 @@ const BlogsHome = () => {
     ></PaginationBlogs> */}
    </Box>
    <Footer></Footer>
+   <LoginFrom open={open} handleClose={handleClose}></LoginFrom>
   </>
  );
 };

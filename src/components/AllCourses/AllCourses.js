@@ -5,8 +5,16 @@ import sectionBgImg from "../../img/section-banner.png";
 import Footer from "../Shared/Footer/Footer";
 import { useForm } from "react-hook-form";
 import CourseCards from "../Shared/CourseCards/CourseCards";
+import LoginFrom from "../Home/LoginForm/LoginFrom";
 
 const AllCourses = () => {
+ // ----------------------------------
+ //  Login Form handler
+ const [open, setOpen] = React.useState(false);
+ const handleOpen = () => setOpen(true);
+ const handleClose = () => setOpen(false);
+
+ // -------------------------------------
  const formContainerStyle = {
   display: "flex",
   justifyContent: "center",
@@ -72,7 +80,7 @@ const AllCourses = () => {
      background: "linear-gradient(135.32deg, #053F66 12.22%, #186FB2 81.8%)",
     }}
    >
-    <Navigation />
+    <Navigation handleOpen={handleOpen} />
    </Box>
    <Box
     sx={{
@@ -166,6 +174,7 @@ const AllCourses = () => {
     </Container>
    </Box>
    <Footer></Footer>
+   <LoginFrom open={open} handleClose={handleClose}></LoginFrom>
   </>
  );
 };
