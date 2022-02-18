@@ -152,7 +152,7 @@ const AllCourses = () => {
         }}
         onClick={() => setSearchResultData(null)}
        >
-        Show All Result
+        Show All Courses
        </Button>
       </Box>
      )}
