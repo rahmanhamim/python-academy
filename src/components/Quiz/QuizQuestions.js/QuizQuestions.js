@@ -1,5 +1,6 @@
 import { Box, Checkbox, Container, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import SingleQuestion from "./SingleQuestion";
 
 const QuizQuestions = () => {
  const questionLineStyle = {
@@ -47,6 +48,8 @@ const QuizQuestions = () => {
   }
  };
 
+ useEffect(() => {}, []);
+
  const handleQuestionCheking = (id) => {
   if (questions[currentQuestion].right_answer == id) {
    setScore(score + 1);
@@ -82,11 +85,13 @@ const QuizQuestions = () => {
 
     <Box>
      {/* Question Container */}
-     {questions[currentQuestion]?.options?.map((option) => (
-      <Box key={option.id} sx={questionLineStyle}>
-       <Checkbox onClick={(e) => handleQuestionCheking(option.id)} />
-       <Typography sx={{ fontSize: "1.2rem" }}>{option?.option}</Typography>
-      </Box>
+     {questions[currentQuestion]?.options?.map((option, index) => (
+      <SingleQuestion
+       key={option.id}
+       option={option}
+       questionLineStyle={questionLineStyle}
+       handleQuestionCheking={handleQuestionCheking}
+      ></SingleQuestion>
      ))}
     </Box>
     {/* Question card footer */}

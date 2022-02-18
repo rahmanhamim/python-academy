@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoginFrom from "../../Home/LoginForm/LoginFrom";
 import Navigation from "../../Shared/Navigation/Navigation";
-import BlogDetailsHero from "../BlogDetailsHero/BlogDetailsHero";
+import BlogDetailsHero from "../BlogDetailsContent/BlogDetailsContent";
 
 const BlogDetailsMain = () => {
  // ----------------------------------
