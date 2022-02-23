@@ -19,44 +19,34 @@ import CardMembershipIcon from "@mui/icons-material/CardMembership";
 import checkIcon from "../../../img/check-logo.png";
 import { CartContext } from "../../../contexts/CartProvider/CartProvider";
 import { Link } from "react-router-dom";
+import { NewCartContext } from "../../../contexts/NewCartProvider/NewCartProvider";
 
 const CourseDetailsHero = ({ courseData }) => {
  const [open, setOpen] = React.useState(false);
  const handleOpen = () => setOpen(true);
  const handleClose = () => setOpen(false);
 
- const [cartItems, setCartItems] = useContext(CartContext);
+ // const [cartItems, setCartItems] = useContext(CartContext);
 
  // const handleAddToCart = (courseItem) => {
- //  console.log(courseItem.id);
- //  const exists = cartItems.find((pd) => pd.id === courseItem.id);
- //  let newCart = [];
- //  if (exists) {
- //   const remaining = cartItems.filter((pd) => pd.id !== courseItem.id);
- //   exists.quantity = Number(exists.quantity) + 1;
- //   console.log(exists);
- //   newCart = [...remaining, courseItem];
+ //  const added = cartItems.find((item) => item.id === courseItem.id);
+ //  if (added) {
+ //   added.quantity = added.quantity + 1;
+ //   added.totalPrice = added.quantity * added.price;
  //  } else {
- //   courseItem.quantity = 1;
- //   newCart = [...cartItems, courseItem];
+ //   courseItem = {
+ //    ...courseItem,
+ //    quantity: 1,
+ //    totalPrice: courseItem.price,
+ //   };
+ //   const newCart = [...cartItems, courseItem];
+ //   setCartItems(newCart);
  //  }
+ // };
+ // console.log(cartItems);
 
- const handleAddToCart = (courseItem) => {
-  const added = cartItems.find((item) => item.id === courseItem.id);
-  if (added) {
-   added.quantity = added.quantity + 1;
-   added.totalPrice = added.quantity * added.price;
-  } else {
-   courseItem = {
-    ...courseItem,
-    quantity: 1,
-    totalPrice: courseItem.price,
-   };
-   const newCart = [...cartItems, courseItem];
-   setCartItems(newCart);
-  }
- };
- console.log(cartItems);
+ const [newCartItems, setNewCartItems, addToCartBtn] =
+  useContext(NewCartContext);
 
  return (
   <Container sx={{ color: "#fff", mt: 8, mb: 5 }}>
@@ -174,7 +164,7 @@ const CourseDetailsHero = ({ courseData }) => {
           textAlign: "right",
          }}
         >
-         <Link to="/cart" style={{ textDecoration: "none" }}>
+         <Link to="/newcart" style={{ textDecoration: "none" }}>
           <Button
            sx={{
             background: "#FF4958",
@@ -186,7 +176,7 @@ const CourseDetailsHero = ({ courseData }) => {
              bgcolor: "#F8B233",
             },
            }}
-           onClick={() => handleAddToCart(courseData)}
+           onClick={() => addToCartBtn(courseData)}
           >
            Add to cart
           </Button>

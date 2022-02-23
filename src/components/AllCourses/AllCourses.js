@@ -65,7 +65,6 @@ const AllCourses = () => {
  };
 
  const [courses, setCourses] = useState([]);
- console.log(courses);
 
  useEffect(() => {
   fetch("/courses.json")

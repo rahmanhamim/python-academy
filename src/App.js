@@ -10,24 +10,29 @@ import QuizHome from "./components/Quiz/QuizHome/QuizHome";
 import BlogsHome from "./components/Blogs/BlogsHome/BlogsHome";
 import AllCourses from "./components/AllCourses/AllCourses";
 import BlogDetailsMain from "./components/Blogs/BlogDetailsMain/BlogDetailsMain";
+import NewCart from "./components/NewCart/NewCart";
+import NewCartProvider from "./contexts/NewCartProvider/NewCartProvider";
 
 function App() {
  return (
   <>
    <AuthProvider>
-    <CartProvider>
-     <ScrollToTop>
-      <Routes>
-       <Route path="/" element={<Home />} />
-       <Route path="course/:id" element={<CourseDetailsMain />} />
-       <Route path="blogs/:id" element={<BlogDetailsMain />} />
-       <Route path="cart" element={<Cart />} />
-       <Route path="quiz" element={<QuizHome />} />
-       <Route path="blogs" element={<BlogsHome />} />
-       <Route path="allcourses" element={<AllCourses />} />
-      </Routes>
-     </ScrollToTop>
-    </CartProvider>
+    <NewCartProvider>
+     <CartProvider>
+      <ScrollToTop>
+       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="course/:id" element={<CourseDetailsMain />} />
+        <Route path="blogs/:id" element={<BlogDetailsMain />} />
+        {/* <Route path="cart" element={<Cart />} />  there is some bug in this route */}
+        <Route path="newcart" element={<NewCart />} />
+        <Route path="quiz" element={<QuizHome />} />
+        <Route path="blogs" element={<BlogsHome />} />
+        <Route path="allcourses" element={<AllCourses />} />
+       </Routes>
+      </ScrollToTop>
+     </CartProvider>
+    </NewCartProvider>
    </AuthProvider>
   </>
  );
