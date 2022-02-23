@@ -18,6 +18,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import useAuth from "../../../hooks/useAuth";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 export default function Navigation({ handleOpen }) {
  const { user, logOut } = useAuth();
@@ -100,6 +101,13 @@ export default function Navigation({ handleOpen }) {
       <ListItemText>Free Quiz</ListItemText>
      </ListItem>
     </Link>
+    <Link style={mobileMenuStyles} to="/newcart">
+     <ListItem button>
+      <ListItemText>
+       <ShoppingCartIcon />
+      </ListItemText>
+     </ListItem>
+    </Link>
    </List>
    <Divider />
   </Box>
@@ -159,6 +167,9 @@ export default function Navigation({ handleOpen }) {
         </Link>
         <Link className={navLinks} to="/quiz">
          Free Quiz
+        </Link>
+        <Link className={navLinks} to="/newcart">
+         <ShoppingCartIcon sx={{ mt: 1 }} />
         </Link>
        </Box>
        {user?.email ? (
