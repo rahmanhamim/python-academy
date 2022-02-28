@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BusketCart = ({ itemsPrice, vatPrice, totalPrice, setTotalPrice }) => {
  const [couponText, setCouponText] = useState("");
@@ -99,7 +100,9 @@ const BusketCart = ({ itemsPrice, vatPrice, totalPrice, setTotalPrice }) => {
     <Typography>Total</Typography>
     <Typography sx={{ fontWeight: "bold" }}>£{totalPrice}</Typography>
    </Box>
-   <Button className={checkoutBtnStyle}>Proceed to Checkout</Button>
+   <Link style={{ textDecoration: "none" }} to="/checkout">
+    <Button className={checkoutBtnStyle}>Proceed to Checkout</Button>
+   </Link>
   </Grid>
  );
 };

@@ -12,6 +12,7 @@ import AllCourses from "./components/AllCourses/AllCourses";
 import BlogDetailsMain from "./components/Blogs/BlogDetailsMain/BlogDetailsMain";
 import NewCart from "./components/NewCart/NewCart";
 import NewCartProvider from "./contexts/NewCartProvider/NewCartProvider";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
  return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="blogs/:id" element={<BlogDetailsMain />} />
         {/* <Route path="cart" element={<Cart />} />  there is some bug in this route */}
         <Route path="newcart" element={<NewCart />} />
+        <Route path="checkout" element={<Checkout />} />
         <Route path="quiz" element={<QuizHome />} />
         <Route path="blogs" element={<BlogsHome />} />
         <Route path="allcourses" element={<AllCourses />} />
