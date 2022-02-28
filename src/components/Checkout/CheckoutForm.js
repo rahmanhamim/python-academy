@@ -6,9 +6,13 @@ import {
  useElements,
  useStripe,
 } from "@stripe/react-stripe-js";
-import React from "react";
+import React, { useState } from "react";
 
 const CheckoutForm = () => {
+ const [errorMessage, setErrorMessage] = useState(null);
+ const [paymentMethod, setPaymentMethod] = useState(null);
+ const [cardName, setCardName] = useState(null);
+
  const ELEMENT_OPTIONS = {
   style: {
    base: {
@@ -33,6 +37,27 @@ const CheckoutForm = () => {
    return;
   }
   e.preventDefault();
+  const card = elements.getElement(CardNumberElement);
+
+  if (card == null) {
+   return;
+  }
+
+  const payload = await stripe.createPaymentMethod({
+   type: "card",
+   card,
+  });
+
+  if (payload.error) {
+   console.log("[error]", payload.error);
+   setErrorMessage(payload.error.message);
+   setPaymentMethod(null);
+  } else {
+   console.log("[PaymentMethod]", payload.paymentMethod);
+   setCardName(payload.paymentMethod.card.brand);
+   setPaymentMethod(payload.paymentMethod);
+   setErrorMessage(null);
+  }
  };
 
  return (

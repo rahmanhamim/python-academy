@@ -1,15 +1,4 @@
-import {
- Box,
- Container,
- Grid,
- Table,
- TableBody,
- TableCell,
- TableContainer,
- TableHead,
- TableRow,
- Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
