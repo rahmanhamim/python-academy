@@ -52,8 +52,10 @@ const CheckoutForm = () => {
    console.log("[error]", payload.error);
    setErrorMessage(payload.error.message);
    setPaymentMethod(null);
+   alert(errorMessage);
   } else {
    console.log("[PaymentMethod]", payload.paymentMethod);
+   alert(`${payload.paymentMethod.card.brand} payment successful`);
    setCardName(payload.paymentMethod.card.brand);
    setPaymentMethod(payload.paymentMethod);
    setErrorMessage(null);
@@ -77,7 +79,7 @@ const CheckoutForm = () => {
      style={{ marginTop: "1.2em", display: "block" }}
      htmlFor="cardNumber"
     >
-     Card Number
+     Card Number | DEMO CARD (4242 4242 4242 4242)
     </label>
     <Box
      sx={{
