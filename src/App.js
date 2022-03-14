@@ -8,10 +8,12 @@ import CourseDetailsMain from "./components/CourseDetails/CourseDetailsMain/Cour
 import Home from "./components/Home/Home/Home";
 import NewCart from "./components/NewCart/NewCart";
 import Quiz from "./components/NewQuiz/Quiz";
+import Result from "./components/NewQuiz/Result";
 import QuizHome from "./components/Quiz/QuizHome/QuizHome";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import CartProvider from "./contexts/CartProvider/CartProvider";
 import NewCartProvider from "./contexts/NewCartProvider/NewCartProvider";
+import QuizProvider from "./contexts/QuizProvider/QuizProvider";
 import ScrollToTop from "./hooks/ScrollToTop";
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
   <>
    <AuthProvider>
     <NewCartProvider>
-     <CartProvider>
+     <QuizProvider>
       <ScrollToTop>
        <Routes>
         <Route path="/" element={<Home />} />
@@ -31,9 +33,10 @@ function App() {
         <Route path="quiz" element={<Quiz />} />
         <Route path="blogs" element={<BlogsHome />} />
         <Route path="allcourses" element={<AllCourses />} />
+        <Route path="result" element={<Result />} />
        </Routes>
       </ScrollToTop>
-     </CartProvider>
+     </QuizProvider>
     </NewCartProvider>
    </AuthProvider>
   </>

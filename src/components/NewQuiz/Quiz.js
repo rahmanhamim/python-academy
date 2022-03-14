@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect, useReducer, useContext } from "react";
 import Question from "./Question";
 import QuizAnswers from "./QuizAnswers";
 import _ from "lodash";
+import { useNavigate } from "react-router-dom";
+import { QuizContext } from "../../contexts/QuizProvider/QuizProvider";
 
 const initialState = null;
 
@@ -45,7 +47,7 @@ const Quiz = () => {
  }, [questions]);
 
  if (qna) {
-  console.log("this is qna", qna);
+  // console.log("this is qna", qna);
  }
 
  const handleAnswerChange = (e, index) => {
@@ -58,11 +60,30 @@ const Quiz = () => {
  };
 
  // handle when user clicks next button
+ const [btnText, setBtnText] = useState("Next Question");
  const nextQuestoinBtn = () => {
-  if (currentQuestion < questions.length) {
+  const questionlength = questions.length - 1;
+
+  if (currentQuestion < questionlength - 1) {
    setCurrentQuestion((prevCurrentQues) => prevCurrentQues + 1);
+  } else if (questionlength - 1 === currentQuestion) {
+   setCurrentQuestion((prevCurrentQues) => prevCurrentQues + 1);
+   setBtnText("Submit");
+  } else if (questionlength === currentQuestion) {
+   //  console.log(qna);
+   alert("final question reached");
+   submit();
   }
  };
+
+ const [userAnswers, setUserAnswers] = useContext(QuizContext); // from context api
+
+ //  submit function
+ const history = useNavigate();
+ async function submit() {
+  setUserAnswers(qna);
+  history("/result");
+ }
 
  return (
   <>
@@ -72,6 +93,7 @@ const Quiz = () => {
      options={qna[currentQuestion]?.options}
      handleChange={handleAnswerChange}
      next={nextQuestoinBtn}
+     btnText={btnText}
     />
    )}
   </>

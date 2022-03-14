@@ -2,8 +2,8 @@ import { Button } from "@mui/material";
 import React from "react";
 import Checkbox from "./Checkbox";
 
-const QuizAnswers = ({ options = [], handleChange, next }) => {
- console.log("from quiz answer component", options);
+const QuizAnswers = ({ options = [], handleChange, next, btnText }) => {
+ // console.log("from quiz answer component", options);
  return (
   <div style={{ border: "1px solid green" }}>
    <span>this is answer component</span> <br /> <br />
@@ -18,8 +18,8 @@ const QuizAnswers = ({ options = [], handleChange, next }) => {
     />
    ))}
    <br />
-   <Button variant="contained" onClick={next}>
-    Next Question
+   <Button variant="contained" onClick={next} value="hello">
+    {btnText}
    </Button>
   </div>
  );

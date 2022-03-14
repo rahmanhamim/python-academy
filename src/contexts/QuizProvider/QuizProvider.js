@@ -1,0 +1,15 @@
+import React, { createContext, useState } from "react";
+
+export const QuizContext = createContext();
+
+const QuizProvider = ({ children }) => {
+ const [userAnswers, setUserAnswers] = useState([1, 2, 4]);
+
+ return (
+  <QuizContext.Provider value={[userAnswers, setUserAnswers]}>
+   {children}
+  </QuizContext.Provider>
+ );
+};
+
+export default QuizProvider;
