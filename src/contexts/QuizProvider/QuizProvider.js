@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 export const QuizContext = createContext();
 
 const QuizProvider = ({ children }) => {
- const [userAnswers, setUserAnswers] = useState([1, 2, 4]);
+ const [userAnswers, setUserAnswers] = useState([]);
 
  return (
   <QuizContext.Provider value={[userAnswers, setUserAnswers]}>
